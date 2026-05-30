@@ -1,0 +1,24 @@
+# Root — multi-module monorepo layout
+
+# ── Backend ─────────────────────────────────────────────────────────────────
+backend/target/
+backend/data/            # H2 .mv.db file lives here (gitignore — dev data)
+*.mv.db
+*.trace.db
+
+# ── Frontend ─────────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ── IDE / OS ─────────────────────────────────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+*.class

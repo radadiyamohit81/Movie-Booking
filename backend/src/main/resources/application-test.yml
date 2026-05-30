@@ -1,0 +1,25 @@
+# ── Test profile overrides ───────────────────────────────────────────────────
+# WHY a separate profile?
+#   Tests must be isolated, repeatable, and fast.
+#   In-memory H2 ensures every test run starts from a clean schema;
+#   create-drop tears it down after each test context loads.
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop     # Fresh schema per test context
+    show-sql: false
+
+  h2:
+    console:
+      enabled: false            # No console needed in CI
+
+logging:
+  level:
+    com.moviedb: DEBUG
+    org.springframework.security: WARN

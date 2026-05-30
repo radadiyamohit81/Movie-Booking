@@ -1,0 +1,71 @@
+# ── Application identity ────────────────────────────────────────────────────
+spring:
+  application:
+    name: moviedb-api
+
+  # ── H2 file-based datasource ─────────────────────────────────────────────
+  # WHY file-based?
+  #   Data survives restarts (unlike mem:). AUTO_SERVER=TRUE lets multiple JVM
+  #   connections (e.g. H2 console + app) share the same file safely.
+  datasource:
+    url: jdbc:h2:file:./data/moviedb;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  # ── JPA / Hibernate ───────────────────────────────────────────────────────
+  jpa:
+    hibernate:
+      # WHY update?
+      #   Applies only additive schema changes on restart — safe for dev.
+      #   Use 'validate' in production with Flyway/Liquibase for explicit migrations.
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false           # Prevents lazy-loading surprise in web layer
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+        jdbc:
+          batch_size: 25          # Efficient bulk inserts during seeding
+
+  # ── H2 web console (dev only — disabled in prod profile) ─────────────────
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: false   # Block external hosts from console
+
+  # ── Jackson JSON serialisation ───────────────────────────────────────────
+  # WHY disable timestamps?
+  #   ISO-8601 strings ("2024-01-01T00:00:00.000Z") are portable across clients.
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    time-zone: UTC
+    default-property-inclusion: non_null
+
+# ── Server ──────────────────────────────────────────────────────────────────
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# ── JWT ─────────────────────────────────────────────────────────────────────
+# WHY externalize the secret?
+#   Never hard-code secrets. In production override jwt.secret via an
+#   environment variable or secrets manager (AWS Secrets Manager, Vault).
+# Secret below = base64("moviedbSecretKeyForJWTAuthentication2024!@#Secure")
+# Must be >= 256 bits for HS256.
+jwt:
+  secret: bW92aWVkYlNlY3JldEtleUZvckpXVEF1dGhlbnRpY2F0aW9uMjAyNCFAI1NlY3VyZQ==
+  expiration: 86400000     # 24 hours in milliseconds
+
+# ── Logging ─────────────────────────────────────────────────────────────────
+logging:
+  level:
+    com.moviedb: INFO
+    org.springframework.security: WARN
+    org.hibernate.SQL: WARN

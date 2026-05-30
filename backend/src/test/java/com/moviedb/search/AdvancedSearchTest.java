@@ -246,7 +246,7 @@ class AdvancedSearchTest {
                         List<String> genre, String director,
                         List<String> writers, List<String> stars) {
         return Movie.builder()
-                .title(title).year(year).rating(rating).popularity(popularity)
+                .title(title).releaseYear(year).rating(rating).popularity(popularity)
                 .genre(genre).director(director).writers(writers).stars(stars)
                 .type(MovieType.movie).status(MovieStatus.published)
                 .description("Test description for " + title)

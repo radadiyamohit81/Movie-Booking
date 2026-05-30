@@ -187,7 +187,7 @@ public class MovieService {
         return MovieDto.builder()
                 .id(String.valueOf(m.getId()))
                 .title(m.getTitle())
-                .year(m.getYear())
+                .releaseYear(m.getReleaseYear())
                 .duration(m.getDuration())
                 .rating(m.getRating())
                 .popularity(m.getPopularity())
@@ -205,7 +205,7 @@ public class MovieService {
 
     private Movie fromRequest(MovieAdminRequest req, Movie movie) {
         if (req.getTitle()       != null) movie.setTitle(req.getTitle());
-        if (req.getYear()        != null) movie.setYear(req.getYear());
+        if (req.getReleaseYear()        != null) movie.setReleaseYear(req.getReleaseYear());
         if (req.getDuration()    != null) movie.setDuration(req.getDuration());
         if (req.getRating()      != null) movie.setRating(req.getRating());
         if (req.getPopularity()  != null) movie.setPopularity(req.getPopularity());

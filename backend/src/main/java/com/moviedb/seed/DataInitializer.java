@@ -65,7 +65,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("The Dark Knight")
-                .year(2008).duration("2h 32m").rating(9.0).popularity(98)
+                .releaseYear(2008).duration("2h 32m").rating(9.0).popularity(98)
                 .description("Batman faces the Joker, a criminal mastermind who plunges Gotham into anarchy.")
                 .director("Christopher Nolan")
                 .writers(List.of("Jonathan Nolan", "Christopher Nolan"))
@@ -75,7 +75,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("The Shawshank Redemption")
-                .year(1994).duration("2h 22m").rating(9.3).popularity(97)
+                .releaseYear(1994).duration("2h 22m").rating(9.3).popularity(97)
                 .description("Two imprisoned men bond over years, finding solace and redemption through acts of decency.")
                 .director("Frank Darabont")
                 .writers(List.of("Stephen King", "Frank Darabont"))
@@ -85,7 +85,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Good Will Hunting")
-                .year(1997).duration("2h 6m").rating(8.3).popularity(85)
+                .releaseYear(1997).duration("2h 6m").rating(8.3).popularity(85)
                 .description("A janitor at MIT hides his genius until a therapist helps him find direction.")
                 .director("Gus Van Sant")
                 .writers(List.of("Matt Damon", "Ben Affleck"))
@@ -95,7 +95,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Oppenheimer")
-                .year(2023).duration("3h 0m").rating(8.3).popularity(92)
+                .releaseYear(2023).duration("3h 0m").rating(8.3).popularity(92)
                 .description("The story of American scientist J. Robert Oppenheimer and the development of the atomic bomb.")
                 .director("Christopher Nolan")
                 .writers(List.of("Christopher Nolan"))
@@ -105,7 +105,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Gladiator")
-                .year(2000).duration("2h 35m").rating(8.5).popularity(88)
+                .releaseYear(2000).duration("2h 35m").rating(8.5).popularity(88)
                 .description("A former Roman general sets out to exact vengeance against the corrupt emperor who murdered his family.")
                 .director("Ridley Scott")
                 .writers(List.of("David Franzoni", "John Logan"))
@@ -117,7 +117,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("The Godfather")
-                .year(1972).duration("2h 55m").rating(9.2).popularity(96)
+                .releaseYear(1972).duration("2h 55m").rating(9.2).popularity(96)
                 .description("The aging patriarch of an organized crime dynasty transfers control of his empire to his reluctant son.")
                 .director("Francis Ford Coppola")
                 .writers(List.of("Mario Puzo", "Francis Ford Coppola"))
@@ -127,7 +127,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Pulp Fiction")
-                .year(1994).duration("2h 34m").rating(8.9).popularity(94)
+                .releaseYear(1994).duration("2h 34m").rating(8.9).popularity(94)
                 .description("The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.")
                 .director("Quentin Tarantino")
                 .writers(List.of("Quentin Tarantino", "Roger Avary"))
@@ -137,7 +137,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Inception")
-                .year(2010).duration("2h 28m").rating(8.8).popularity(93)
+                .releaseYear(2010).duration("2h 28m").rating(8.8).popularity(93)
                 .description("A thief who steals corporate secrets through dream-sharing technology is given the task of planting an idea.")
                 .director("Christopher Nolan")
                 .writers(List.of("Christopher Nolan"))
@@ -147,7 +147,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("The Matrix")
-                .year(1999).duration("2h 16m").rating(8.7).popularity(91)
+                .releaseYear(1999).duration("2h 16m").rating(8.7).popularity(91)
                 .description("A computer hacker learns from mysterious rebels about the true nature of his reality.")
                 .director("Lana Wachowski")
                 .writers(List.of("Lana Wachowski", "Lilly Wachowski"))
@@ -157,7 +157,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Forrest Gump")
-                .year(1994).duration("2h 22m").rating(8.8).popularity(95)
+                .releaseYear(1994).duration("2h 22m").rating(8.8).popularity(95)
                 .description("The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other events unfold from the perspective of an Alabama man.")
                 .director("Robert Zemeckis")
                 .writers(List.of("Winston Groom", "Eric Roth"))
@@ -167,7 +167,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Fight Club")
-                .year(1999).duration("2h 19m").rating(8.8).popularity(92)
+                .releaseYear(1999).duration("2h 19m").rating(8.8).popularity(92)
                 .description("An insomniac office worker and a devil-may-care soap maker form an underground fight club.")
                 .director("David Fincher")
                 .writers(List.of("Jim Uhls", "Chuck Palahniuk"))
@@ -177,7 +177,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Interstellar")
-                .year(2014).duration("2h 49m").rating(8.6).popularity(90)
+                .releaseYear(2014).duration("2h 49m").rating(8.6).popularity(90)
                 .description("A team of explorers travel through a wormhole in space to ensure humanity's survival.")
                 .director("Christopher Nolan")
                 .writers(List.of("Jonathan Nolan", "Christopher Nolan"))
@@ -187,7 +187,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Parasite")
-                .year(2019).duration("2h 12m").rating(8.5).popularity(87)
+                .releaseYear(2019).duration("2h 12m").rating(8.5).popularity(87)
                 .description("Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.")
                 .director("Bong Joon-ho")
                 .writers(List.of("Bong Joon-ho", "Han Jin-won"))
@@ -197,7 +197,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Avengers: Endgame")
-                .year(2019).duration("3h 1m").rating(8.4).popularity(96)
+                .releaseYear(2019).duration("3h 1m").rating(8.4).popularity(96)
                 .description("After the devastating events of Infinity War, the Avengers assemble once more to reverse Thanos's actions.")
                 .director("Anthony Russo")
                 .writers(List.of("Christopher Markus", "Stephen McFeely"))
@@ -207,7 +207,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Joker")
-                .year(2019).duration("2h 2m").rating(8.4).popularity(86)
+                .releaseYear(2019).duration("2h 2m").rating(8.4).popularity(86)
                 .description("A mentally troubled comedian embarks on a downward spiral leading to the creation of an iconic villain.")
                 .director("Todd Phillips")
                 .writers(List.of("Todd Phillips", "Scott Silver"))
@@ -217,7 +217,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("La La Land")
-                .year(2016).duration("2h 8m").rating(8.0).popularity(82)
+                .releaseYear(2016).duration("2h 8m").rating(8.0).popularity(82)
                 .description("While navigating their careers in Los Angeles, a pianist and an actress fall in love.")
                 .director("Damien Chazelle")
                 .writers(List.of("Damien Chazelle"))
@@ -227,7 +227,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("1917")
-                .year(2019).duration("1h 59m").rating(8.3).popularity(84)
+                .releaseYear(2019).duration("1h 59m").rating(8.3).popularity(84)
                 .description("Two British soldiers are sent on a seemingly impossible mission to deliver a message that could save 1,600 lives.")
                 .director("Sam Mendes")
                 .writers(List.of("Sam Mendes", "Krysty Wilson-Cairns"))
@@ -237,7 +237,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Mad Max: Fury Road")
-                .year(2015).duration("2h 0m").rating(8.1).popularity(83)
+                .releaseYear(2015).duration("2h 0m").rating(8.1).popularity(83)
                 .description("In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler.")
                 .director("George Miller")
                 .writers(List.of("George Miller", "Brendan McCarthy"))
@@ -247,7 +247,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Get Out")
-                .year(2017).duration("1h 44m").rating(7.7).popularity(78)
+                .releaseYear(2017).duration("1h 44m").rating(7.7).popularity(78)
                 .description("A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness gives way to a full-on revelation.")
                 .director("Jordan Peele")
                 .writers(List.of("Jordan Peele"))
@@ -257,7 +257,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("The Revenant")
-                .year(2015).duration("2h 36m").rating(8.0).popularity(80)
+                .releaseYear(2015).duration("2h 36m").rating(8.0).popularity(80)
                 .description("A frontiersman on a fur trading expedition fights for survival after being mauled by a bear.")
                 .director("Alejandro G. Iñárritu")
                 .writers(List.of("Mark L. Smith", "Alejandro G. Iñárritu"))
@@ -267,7 +267,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Dune")
-                .year(2021).duration("2h 35m").rating(8.0).popularity(87)
+                .releaseYear(2021).duration("2h 35m").rating(8.0).popularity(87)
                 .description("A noble family becomes embroiled in a war for control over the galaxy's most valuable asset.")
                 .director("Denis Villeneuve")
                 .writers(List.of("Jon Spaihts", "Denis Villeneuve"))
@@ -277,7 +277,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Breaking Bad")
-                .year(2008).duration("47m per episode").rating(9.5).popularity(99)
+                .releaseYear(2008).duration("47m per episode").rating(9.5).popularity(99)
                 .description("A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing methamphetamine.")
                 .director("Vince Gilligan")
                 .writers(List.of("Vince Gilligan"))
@@ -287,7 +287,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Stranger Things")
-                .year(2016).duration("51m per episode").rating(8.7).popularity(93)
+                .releaseYear(2016).duration("51m per episode").rating(8.7).popularity(93)
                 .description("When a young boy disappears, his mother and friends uncover a secret government experiment.")
                 .director("Matt Duffer")
                 .writers(List.of("Matt Duffer", "Ross Duffer"))
@@ -299,7 +299,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("The Batman")
-                .year(2022).duration("2h 56m").rating(7.8).popularity(88)
+                .releaseYear(2022).duration("2h 56m").rating(7.8).popularity(88)
                 .description("When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption.")
                 .director("Matt Reeves")
                 .writers(List.of("Matt Reeves", "Peter Craig"))
@@ -309,7 +309,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Everything Everywhere All at Once")
-                .year(2022).duration("2h 19m").rating(7.8).popularity(86)
+                .releaseYear(2022).duration("2h 19m").rating(7.8).popularity(86)
                 .description("A middle-aged Chinese immigrant is swept up into an insane adventure in which she alone can save existence by exploring other universes.")
                 .director("Daniel Kwan")
                 .writers(List.of("Daniel Kwan", "Daniel Scheinert"))
@@ -319,7 +319,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Top Gun: Maverick")
-                .year(2022).duration("2h 10m").rating(8.3).popularity(91)
+                .releaseYear(2022).duration("2h 10m").rating(8.3).popularity(91)
                 .description("After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is pushed to train a detachment of graduates for a specialized mission.")
                 .director("Joseph Kosinski")
                 .writers(List.of("Ehren Kruger", "Eric Warren Singer", "Christopher McQuarrie"))
@@ -329,7 +329,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("RRR")
-                .year(2022).duration("3h 2m").rating(7.9).popularity(85)
+                .releaseYear(2022).duration("3h 2m").rating(7.9).popularity(85)
                 .description("A fictitious story about two legendary revolutionaries and their journey away from home before they started fighting for their country in 1920s.")
                 .director("S.S. Rajamouli")
                 .writers(List.of("V. Vijayendra Prasad"))
@@ -339,7 +339,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("The Fabelmans")
-                .year(2022).duration("2h 31m").rating(7.7).popularity(74)
+                .releaseYear(2022).duration("2h 31m").rating(7.7).popularity(74)
                 .description("Growing up in post-World War II era Arizona, a young man named Sammy Fabelman discovers a shattering family secret and explores how the power of films can help him see the truth.")
                 .director("Steven Spielberg")
                 .writers(List.of("Steven Spielberg", "Tony Kushner"))
@@ -349,7 +349,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Barbie")
-                .year(2023).duration("1h 54m").rating(6.9).popularity(89)
+                .releaseYear(2023).duration("1h 54m").rating(6.9).popularity(89)
                 .description("Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land, until they begin questioning their existence.")
                 .director("Greta Gerwig")
                 .writers(List.of("Greta Gerwig", "Noah Baumbach"))
@@ -359,7 +359,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Guardians of the Galaxy Vol. 3")
-                .year(2023).duration("2h 30m").rating(7.9).popularity(87)
+                .releaseYear(2023).duration("2h 30m").rating(7.9).popularity(87)
                 .description("Still reeling from the loss of Gamora, Peter Quill must rally his team around him to defend the universe along with protecting one of their own.")
                 .director("James Gunn")
                 .writers(List.of("James Gunn"))
@@ -369,7 +369,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Killers of the Flower Moon")
-                .year(2023).duration("3h 26m").rating(7.7).popularity(79)
+                .releaseYear(2023).duration("3h 26m").rating(7.7).popularity(79)
                 .description("Members of the Osage Nation are murdered under mysterious circumstances in 1920s Oklahoma sparking a major FBI investigation.")
                 .director("Martin Scorsese")
                 .writers(List.of("Eric Roth", "Martin Scorsese"))
@@ -379,7 +379,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Poor Things")
-                .year(2023).duration("2h 21m").rating(8.0).popularity(82)
+                .releaseYear(2023).duration("2h 21m").rating(8.0).popularity(82)
                 .description("The incredible tale and fantastical adventures of Bella Baxter, a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter.")
                 .director("Yorgos Lanthimos")
                 .writers(List.of("Tony McNamara"))
@@ -389,7 +389,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Dune: Part Two")
-                .year(2024).duration("2h 46m").rating(8.5).popularity(93)
+                .releaseYear(2024).duration("2h 46m").rating(8.5).popularity(93)
                 .description("Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family.")
                 .director("Denis Villeneuve")
                 .writers(List.of("Denis Villeneuve", "Jon Spaihts"))
@@ -399,7 +399,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Deadpool & Wolverine")
-                .year(2024).duration("2h 7m").rating(7.7).popularity(90)
+                .releaseYear(2024).duration("2h 7m").rating(7.7).popularity(90)
                 .description("Deadpool is offered a chance to join the Time Variance Authority but instead recruits a reluctant Wolverine to help save his world.")
                 .director("Shawn Levy")
                 .writers(List.of("Ryan Reynolds", "Shawn Levy", "Rhett Reese"))
@@ -409,7 +409,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Inside Out 2")
-                .year(2024).duration("1h 40m").rating(7.8).popularity(88)
+                .releaseYear(2024).duration("1h 40m").rating(7.8).popularity(88)
                 .description("Joy and the other emotions inside Riley's head face a new challenge when Anxiety and new emotions show up unexpectedly.")
                 .director("Kelsey Mann")
                 .writers(List.of("Meg LeFauve", "Dave Holstein"))
@@ -419,7 +419,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Alien: Romulus")
-                .year(2024).duration("1h 59m").rating(7.3).popularity(82)
+                .releaseYear(2024).duration("1h 59m").rating(7.3).popularity(82)
                 .description("While scavenging the deep ends of a derelict space station, a group of young space colonists come face to face with the most terrifying life form in the universe.")
                 .director("Fede Álvarez")
                 .writers(List.of("Fede Álvarez", "Rodo Sayagues"))
@@ -429,7 +429,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Conclave")
-                .year(2024).duration("2h 0m").rating(7.5).popularity(78)
+                .releaseYear(2024).duration("2h 0m").rating(7.5).popularity(78)
                 .description("A cardinal oversees the top-secret election of a new Pope, uncovering shocking secrets about the candidates.")
                 .director("Edward Berger")
                 .writers(List.of("Peter Straughan"))
@@ -439,7 +439,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Anora")
-                .year(2024).duration("2h 18m").rating(7.9).popularity(76)
+                .releaseYear(2024).duration("2h 18m").rating(7.9).popularity(76)
                 .description("A young sex worker from Brooklyn gets her chance at a Cinderella story when she meets and impulsively marries the son of an oligarch.")
                 .director("Sean Baker")
                 .writers(List.of("Sean Baker"))
@@ -449,7 +449,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Nosferatu")
-                .year(2024).duration("2h 12m").rating(7.6).popularity(80)
+                .releaseYear(2024).duration("2h 12m").rating(7.6).popularity(80)
                 .description("A gothic tale of obsession between a haunted young woman and the terrifying vampire infatuated with her.")
                 .director("Robert Eggers")
                 .writers(List.of("Robert Eggers"))
@@ -459,7 +459,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Severance")
-                .year(2022).duration("1h 0m per episode").rating(9.0).popularity(91)
+                .releaseYear(2022).duration("1h 0m per episode").rating(9.0).popularity(91)
                 .description("Mark leads a team of office workers whose memories have been surgically divided between their work and personal lives, creating a perfect balance.")
                 .director("Ben Stiller")
                 .writers(List.of("Dan Erickson"))
@@ -469,7 +469,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("The Last of Us")
-                .year(2023).duration("1h per episode").rating(8.8).popularity(95)
+                .releaseYear(2023).duration("1h per episode").rating(8.8).popularity(95)
                 .description("After a global pandemic destroys civilization, a hardened survivor takes charge of a 14-year-old girl who may be humanity's last hope.")
                 .director("Neil Druckmann")
                 .writers(List.of("Craig Mazin", "Neil Druckmann"))
@@ -479,7 +479,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Shogun")
-                .year(2024).duration("1h per episode").rating(8.6).popularity(89)
+                .releaseYear(2024).duration("1h per episode").rating(8.6).popularity(89)
                 .description("In feudal Japan, a shipwrecked English navigator becomes a key player in a deadly power struggle between warring warlords.")
                 .director("Rachel Kondo")
                 .writers(List.of("Rachel Kondo", "Caillin Pully"))
@@ -489,7 +489,7 @@ public class DataInitializer {
 
             Movie.builder()
                 .title("Fallout")
-                .year(2024).duration("1h per episode").rating(8.5).popularity(90)
+                .releaseYear(2024).duration("1h per episode").rating(8.5).popularity(90)
                 .description("Based on the Bethesda game series, Lucy MacLean leaves her underground vault to navigate the dystopian wasteland of 2296 Los Angeles.")
                 .director("Jonathan Nolan")
                 .writers(List.of("Geneva Robertson-Dworet", "Graham Wagner"))
@@ -500,7 +500,7 @@ public class DataInitializer {
             // Upcoming (not published — tests only return published)
             Movie.builder()
                 .title("Avatar 3")
-                .year(2025).duration("TBD").rating(null).popularity(75)
+                .releaseYear(2025).duration("TBD").rating(null).popularity(75)
                 .description("The next chapter in the Avatar saga continues on Pandora.")
                 .director("James Cameron")
                 .writers(List.of("James Cameron"))

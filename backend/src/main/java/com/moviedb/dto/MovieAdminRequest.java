@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class MovieAdminRequest {
 
     private String title;
-    private Integer year;
+    private Integer releaseYear;
     private String duration;
     private Double rating;
     private Integer popularity;

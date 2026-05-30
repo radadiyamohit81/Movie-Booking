@@ -1,12 +1,11 @@
 package com.moviedb.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 /**
  * Data Transfer Object for Movie responses.
@@ -38,7 +37,7 @@ public class MovieDto {
     private String id;
 
     private String title;
-    private Integer year;
+    private Integer releaseYear;
     private String duration;
     private Double rating;
     private Integer popularity;

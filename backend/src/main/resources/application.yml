@@ -5,10 +5,10 @@ spring:
 
   # ── H2 file-based datasource ─────────────────────────────────────────────
   # WHY file-based?
-  #   Data survives restarts (unlike mem:). AUTO_SERVER=TRUE lets multiple JVM
-  #   connections (e.g. H2 console + app) share the same file safely.
+  #   Data survives restarts (unlike mem:). The H2 console runs in the same
+  #   JVM as the app so no AUTO_SERVER is needed — both share one connection.
   datasource:
-    url: jdbc:h2:file:./data/moviedb;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:file:./data/moviedb
     driver-class-name: org.h2.Driver
     username: sa
     password: ""
@@ -16,10 +16,11 @@ spring:
   # ── JPA / Hibernate ───────────────────────────────────────────────────────
   jpa:
     hibernate:
-      # WHY update?
-      #   Applies only additive schema changes on restart — safe for dev.
-      #   Use 'validate' in production with Flyway/Liquibase for explicit migrations.
-      ddl-auto: update
+      # WHY create?
+      #   Drops and recreates schema on every startup — guaranteed clean slate
+      #   for development. DataInitializer seeds on first count==0 check.
+      #   Use 'validate' in production with Flyway/Liquibase.
+      ddl-auto: create
     show-sql: false
     open-in-view: false           # Prevents lazy-loading surprise in web layer
     properties:

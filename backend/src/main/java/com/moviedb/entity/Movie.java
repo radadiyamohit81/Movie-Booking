@@ -34,8 +34,8 @@ import java.util.List;
        indexes = {
            @Index(name = "idx_movies_status",     columnList = "status"),
            @Index(name = "idx_movies_type",       columnList = "type"),
-           @Index(name = "idx_movies_rating",     columnList = "rating DESC"),
-           @Index(name = "idx_movies_popularity", columnList = "popularity DESC")
+           @Index(name = "idx_movies_rating",     columnList = "rating"),
+           @Index(name = "idx_movies_popularity", columnList = "popularity")
        })
 @Data
 @Builder
@@ -51,7 +51,7 @@ public class Movie {
     @Column(nullable = false, length = 255)
     private String title;
 
-    private Integer year;
+    private Integer releaseYear;
 
     /** Human-readable duration: "2h 32m" */
     @Column(length = 20)

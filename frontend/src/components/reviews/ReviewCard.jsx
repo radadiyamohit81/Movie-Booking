@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatDate, truncate } from '../../utils/helpers';
+import { formatDate } from '../../utils/helpers';
 
 export default function ReviewCard({ review, currentUserId, onDelete }) {
   const isSpoiler = review.spoiler;

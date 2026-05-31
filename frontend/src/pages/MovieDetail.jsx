@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {
   getMovie, getReviews, createReview, deleteReview,
-  rateMovie, getRatings, deleteRating,
+  rateMovie, getRatings,
   addToWatchlist, removeFromWatchlist, getWatchlist,
 } from '../api/movieApi';
 import { useAuth }    from '../context/AuthContext';
@@ -13,7 +13,7 @@ import { formatRating, posterGradient } from '../utils/helpers';
 
 export default function MovieDetail() {
   const { id } = useParams();
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   const [movie,     setMovie]     = useState(null);

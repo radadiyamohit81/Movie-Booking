@@ -5,7 +5,6 @@ import LoadingSpinner from '../components/common/LoadingSpinner';
 import { formatRating, posterGradient } from '../utils/helpers';
 
 export default function Watchlist() {
-  const [items,   setItems]   = useState([]);
   const [movies,  setMovies]  = useState([]);
   const [loading, setLoading] = useState(true);
   const [error,   setError]   = useState(null);
@@ -14,7 +13,6 @@ export default function Watchlist() {
     async function load() {
       try {
         const { data: watchlist } = await getWatchlist();
-        setItems(watchlist);
         const movieDetails = await Promise.all(
           watchlist.map((w) => getMovie(w.movieId).then((r) => r.data))
         );
@@ -31,7 +29,6 @@ export default function Watchlist() {
   const handleRemove = async (movieId) => {
     await removeFromWatchlist(movieId);
     setMovies((prev) => prev.filter((m) => m._id !== String(movieId)));
-    setItems((prev) => prev.filter((w) => String(w.movieId) !== String(movieId)));
   };
 
   return (

@@ -17,7 +17,7 @@ export default function Admin() {
   const [msg,     setMsg]     = useState('');
   const [submitting, setSubmitting] = useState(false);
 
-  useEffect(() => { fetchMovies({}); }, []);
+  useEffect(() => { fetchMovies({}); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 

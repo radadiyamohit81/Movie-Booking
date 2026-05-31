@@ -42,7 +42,7 @@ export default function Search() {
     } finally {
       setLoading(false);
     }
-  }, [searchParams]);  // re-run when URL params change
+  }, [searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => { doSearch(); }, [doSearch]);
 

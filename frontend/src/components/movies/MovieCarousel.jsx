@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
 import MovieCard from './MovieCard';
 import '../../components/movies/MovieCard.css';
 

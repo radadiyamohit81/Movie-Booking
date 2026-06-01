@@ -1,7 +1,7 @@
 package com.moviedb.controller;
 
 import com.moviedb.dto.WatchlistRequest;
-import com.moviedb.entity.Watchlist;
+import com.moviedb.model.Watchlist;
 import com.moviedb.repository.UserRepository;
 import com.moviedb.service.WatchlistService;
 import jakarta.validation.Valid;

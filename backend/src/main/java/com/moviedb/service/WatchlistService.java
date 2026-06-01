@@ -1,7 +1,7 @@
 package com.moviedb.service;
 
 import com.moviedb.dto.WatchlistRequest;
-import com.moviedb.entity.Watchlist;
+import com.moviedb.model.Watchlist;
 import com.moviedb.exception.ResourceNotFoundException;
 import com.moviedb.repository.MovieRepository;
 import com.moviedb.repository.WatchlistRepository;

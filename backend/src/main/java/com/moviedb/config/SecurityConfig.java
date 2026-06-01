@@ -1,6 +1,6 @@
 package com.moviedb.config;
 
-import com.moviedb.security.JwtFilter;
+import com.moviedb.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -60,7 +60,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final JwtFilter jwtFilter;
+    private final JwtAuthenticationFilter jwtFilter;
     private final UserDetailsService userDetailsService;
 
     @Bean

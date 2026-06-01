@@ -1,6 +1,6 @@
 package com.moviedb.controller;
 
-import com.moviedb.entity.Notification;
+import com.moviedb.model.Notification;
 import com.moviedb.repository.UserRepository;
 import com.moviedb.service.NotificationService;
 import lombok.RequiredArgsConstructor;

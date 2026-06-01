@@ -1,7 +1,6 @@
 package com.moviedb.repository.spec;
 
-import com.moviedb.entity.Movie;
-import com.moviedb.enums.MovieStatus;
+import com.moviedb.model.Movie;
 import jakarta.persistence.criteria.*;
 import org.springframework.data.jpa.domain.Specification;
 
@@ -40,12 +39,12 @@ public final class MovieSpecifications {
 
     public static Specification<Movie> isPublished() {
         return (root, query, cb) ->
-                cb.equal(root.get("status"), MovieStatus.published);
+                cb.equal(root.get("status"), Movie.MovieStatus.PUBLISHED);
     }
 
     public static Specification<Movie> isUpcoming() {
         return (root, query, cb) ->
-                cb.equal(root.get("status"), MovieStatus.upcoming);
+                cb.equal(root.get("status"), Movie.MovieStatus.UPCOMING);
     }
 
     // ── Text query ────────────────────────────────────────────────────────

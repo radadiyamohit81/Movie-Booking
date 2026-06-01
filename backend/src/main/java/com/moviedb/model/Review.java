@@ -1,4 +1,4 @@
-package com.moviedb.entity;
+package com.moviedb.model;
 
 import jakarta.persistence.*;
 import lombok.*;

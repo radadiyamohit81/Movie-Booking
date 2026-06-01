@@ -1,9 +1,7 @@
-package com.moviedb.seed;
+package com.moviedb.config;
 
-import com.moviedb.entity.Movie;
-import com.moviedb.entity.User;
-import com.moviedb.enums.MovieStatus;
-import com.moviedb.enums.MovieType;
+import com.moviedb.model.Movie;
+import com.moviedb.model.User;
 import com.moviedb.repository.MovieRepository;
 import com.moviedb.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -71,7 +69,7 @@ public class DataInitializer {
                 .writers(List.of("Jonathan Nolan", "Christopher Nolan"))
                 .stars(List.of("Christian Bale", "Heath Ledger", "Aaron Eckhart"))
                 .genre(List.of("Action", "Crime", "Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("The Shawshank Redemption")
@@ -81,7 +79,7 @@ public class DataInitializer {
                 .writers(List.of("Stephen King", "Frank Darabont"))
                 .stars(List.of("Tim Robbins", "Morgan Freeman", "Bob Gunton"))
                 .genre(List.of("Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Good Will Hunting")
@@ -91,7 +89,7 @@ public class DataInitializer {
                 .writers(List.of("Matt Damon", "Ben Affleck"))
                 .stars(List.of("Matt Damon", "Robin Williams", "Ben Affleck"))
                 .genre(List.of("Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Oppenheimer")
@@ -101,7 +99,7 @@ public class DataInitializer {
                 .writers(List.of("Christopher Nolan"))
                 .stars(List.of("Cillian Murphy", "Emily Blunt", "Robert Downey Jr."))
                 .genre(List.of("Biography", "Drama", "History"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Gladiator")
@@ -111,7 +109,7 @@ public class DataInitializer {
                 .writers(List.of("David Franzoni", "John Logan"))
                 .stars(List.of("Russell Crowe", "Joaquin Phoenix", "Connie Nielsen"))
                 .genre(List.of("Action", "Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             // ── Additional 15+ movies ──────────────────────────────────────
 
@@ -123,7 +121,7 @@ public class DataInitializer {
                 .writers(List.of("Mario Puzo", "Francis Ford Coppola"))
                 .stars(List.of("Marlon Brando", "Al Pacino", "James Caan"))
                 .genre(List.of("Crime", "Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Pulp Fiction")
@@ -133,7 +131,7 @@ public class DataInitializer {
                 .writers(List.of("Quentin Tarantino", "Roger Avary"))
                 .stars(List.of("John Travolta", "Uma Thurman", "Samuel L. Jackson"))
                 .genre(List.of("Crime", "Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Inception")
@@ -143,7 +141,7 @@ public class DataInitializer {
                 .writers(List.of("Christopher Nolan"))
                 .stars(List.of("Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"))
                 .genre(List.of("Action", "Sci-Fi", "Thriller"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("The Matrix")
@@ -153,7 +151,7 @@ public class DataInitializer {
                 .writers(List.of("Lana Wachowski", "Lilly Wachowski"))
                 .stars(List.of("Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"))
                 .genre(List.of("Action", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Forrest Gump")
@@ -163,7 +161,7 @@ public class DataInitializer {
                 .writers(List.of("Winston Groom", "Eric Roth"))
                 .stars(List.of("Tom Hanks", "Robin Wright", "Gary Sinise"))
                 .genre(List.of("Drama", "Romance"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Fight Club")
@@ -173,7 +171,7 @@ public class DataInitializer {
                 .writers(List.of("Jim Uhls", "Chuck Palahniuk"))
                 .stars(List.of("Brad Pitt", "Edward Norton", "Helena Bonham Carter"))
                 .genre(List.of("Drama", "Thriller"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Interstellar")
@@ -183,7 +181,7 @@ public class DataInitializer {
                 .writers(List.of("Jonathan Nolan", "Christopher Nolan"))
                 .stars(List.of("Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"))
                 .genre(List.of("Adventure", "Drama", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Parasite")
@@ -193,7 +191,7 @@ public class DataInitializer {
                 .writers(List.of("Bong Joon-ho", "Han Jin-won"))
                 .stars(List.of("Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong"))
                 .genre(List.of("Comedy", "Drama", "Thriller"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Avengers: Endgame")
@@ -203,7 +201,7 @@ public class DataInitializer {
                 .writers(List.of("Christopher Markus", "Stephen McFeely"))
                 .stars(List.of("Robert Downey Jr.", "Chris Evans", "Mark Ruffalo"))
                 .genre(List.of("Action", "Adventure", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Joker")
@@ -213,7 +211,7 @@ public class DataInitializer {
                 .writers(List.of("Todd Phillips", "Scott Silver"))
                 .stars(List.of("Joaquin Phoenix", "Robert De Niro", "Zazie Beetz"))
                 .genre(List.of("Crime", "Drama", "Thriller"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("La La Land")
@@ -223,7 +221,7 @@ public class DataInitializer {
                 .writers(List.of("Damien Chazelle"))
                 .stars(List.of("Ryan Gosling", "Emma Stone", "John Legend"))
                 .genre(List.of("Drama", "Music", "Romance"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("1917")
@@ -233,7 +231,7 @@ public class DataInitializer {
                 .writers(List.of("Sam Mendes", "Krysty Wilson-Cairns"))
                 .stars(List.of("George MacKay", "Dean-Charles Chapman", "Mark Strong"))
                 .genre(List.of("Drama", "War"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Mad Max: Fury Road")
@@ -243,7 +241,7 @@ public class DataInitializer {
                 .writers(List.of("George Miller", "Brendan McCarthy"))
                 .stars(List.of("Tom Hardy", "Charlize Theron", "Nicholas Hoult"))
                 .genre(List.of("Action", "Adventure", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Get Out")
@@ -253,7 +251,7 @@ public class DataInitializer {
                 .writers(List.of("Jordan Peele"))
                 .stars(List.of("Daniel Kaluuya", "Allison Williams", "Bradley Whitford"))
                 .genre(List.of("Horror", "Mystery", "Thriller"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("The Revenant")
@@ -263,7 +261,7 @@ public class DataInitializer {
                 .writers(List.of("Mark L. Smith", "Alejandro G. Iñárritu"))
                 .stars(List.of("Leonardo DiCaprio", "Tom Hardy", "Will Poulter"))
                 .genre(List.of("Action", "Adventure", "Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Dune")
@@ -273,7 +271,7 @@ public class DataInitializer {
                 .writers(List.of("Jon Spaihts", "Denis Villeneuve"))
                 .stars(List.of("Timothée Chalamet", "Rebecca Ferguson", "Oscar Isaac"))
                 .genre(List.of("Action", "Adventure", "Drama", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Breaking Bad")
@@ -283,7 +281,7 @@ public class DataInitializer {
                 .writers(List.of("Vince Gilligan"))
                 .stars(List.of("Bryan Cranston", "Aaron Paul", "Anna Gunn"))
                 .genre(List.of("Crime", "Drama", "Thriller"))
-                .type(MovieType.series).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.SERIES).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Stranger Things")
@@ -293,7 +291,7 @@ public class DataInitializer {
                 .writers(List.of("Matt Duffer", "Ross Duffer"))
                 .stars(List.of("Millie Bobby Brown", "Finn Wolfhard", "Winona Ryder"))
                 .genre(List.of("Drama", "Fantasy", "Horror", "Sci-Fi"))
-                .type(MovieType.series).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.SERIES).status(Movie.MovieStatus.PUBLISHED).build(),
 
             // ── Last 5 years (2021-2026) ──────────────────────────────────
 
@@ -305,7 +303,7 @@ public class DataInitializer {
                 .writers(List.of("Matt Reeves", "Peter Craig"))
                 .stars(List.of("Robert Pattinson", "Zoë Kravitz", "Jeffrey Wright"))
                 .genre(List.of("Action", "Crime", "Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Everything Everywhere All at Once")
@@ -315,7 +313,7 @@ public class DataInitializer {
                 .writers(List.of("Daniel Kwan", "Daniel Scheinert"))
                 .stars(List.of("Michelle Yeoh", "Ke Huy Quan", "Jamie Lee Curtis"))
                 .genre(List.of("Action", "Adventure", "Comedy", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Top Gun: Maverick")
@@ -325,7 +323,7 @@ public class DataInitializer {
                 .writers(List.of("Ehren Kruger", "Eric Warren Singer", "Christopher McQuarrie"))
                 .stars(List.of("Tom Cruise", "Miles Teller", "Jennifer Connelly"))
                 .genre(List.of("Action", "Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("RRR")
@@ -335,7 +333,7 @@ public class DataInitializer {
                 .writers(List.of("V. Vijayendra Prasad"))
                 .stars(List.of("N.T. Rama Rao Jr.", "Ram Charan", "Alia Bhatt"))
                 .genre(List.of("Action", "Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("The Fabelmans")
@@ -345,7 +343,7 @@ public class DataInitializer {
                 .writers(List.of("Steven Spielberg", "Tony Kushner"))
                 .stars(List.of("Michelle Williams", "Paul Dano", "Gabriel LaBelle"))
                 .genre(List.of("Drama"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Barbie")
@@ -355,7 +353,7 @@ public class DataInitializer {
                 .writers(List.of("Greta Gerwig", "Noah Baumbach"))
                 .stars(List.of("Margot Robbie", "Ryan Gosling", "America Ferrera"))
                 .genre(List.of("Adventure", "Comedy", "Fantasy"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Guardians of the Galaxy Vol. 3")
@@ -365,7 +363,7 @@ public class DataInitializer {
                 .writers(List.of("James Gunn"))
                 .stars(List.of("Chris Pratt", "Zoe Saldana", "Bradley Cooper"))
                 .genre(List.of("Action", "Adventure", "Comedy", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Killers of the Flower Moon")
@@ -375,7 +373,7 @@ public class DataInitializer {
                 .writers(List.of("Eric Roth", "Martin Scorsese"))
                 .stars(List.of("Leonardo DiCaprio", "Robert De Niro", "Lily Gladstone"))
                 .genre(List.of("Crime", "Drama", "History"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Poor Things")
@@ -385,7 +383,7 @@ public class DataInitializer {
                 .writers(List.of("Tony McNamara"))
                 .stars(List.of("Emma Stone", "Mark Ruffalo", "Willem Dafoe"))
                 .genre(List.of("Comedy", "Drama", "Fantasy", "Romance"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Dune: Part Two")
@@ -395,7 +393,7 @@ public class DataInitializer {
                 .writers(List.of("Denis Villeneuve", "Jon Spaihts"))
                 .stars(List.of("Timothée Chalamet", "Zendaya", "Rebecca Ferguson"))
                 .genre(List.of("Action", "Adventure", "Drama", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Deadpool & Wolverine")
@@ -405,7 +403,7 @@ public class DataInitializer {
                 .writers(List.of("Ryan Reynolds", "Shawn Levy", "Rhett Reese"))
                 .stars(List.of("Ryan Reynolds", "Hugh Jackman", "Emma Corrin"))
                 .genre(List.of("Action", "Comedy", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Inside Out 2")
@@ -415,7 +413,7 @@ public class DataInitializer {
                 .writers(List.of("Meg LeFauve", "Dave Holstein"))
                 .stars(List.of("Amy Poehler", "Maya Hawke", "Kensington Tallman"))
                 .genre(List.of("Animation", "Adventure", "Comedy", "Family"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Alien: Romulus")
@@ -425,7 +423,7 @@ public class DataInitializer {
                 .writers(List.of("Fede Álvarez", "Rodo Sayagues"))
                 .stars(List.of("Cailee Spaeny", "David Jonsson", "Archie Renaux"))
                 .genre(List.of("Horror", "Sci-Fi", "Thriller"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Conclave")
@@ -435,7 +433,7 @@ public class DataInitializer {
                 .writers(List.of("Peter Straughan"))
                 .stars(List.of("Ralph Fiennes", "Stanley Tucci", "John Lithgow"))
                 .genre(List.of("Drama", "Mystery", "Thriller"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Anora")
@@ -445,7 +443,7 @@ public class DataInitializer {
                 .writers(List.of("Sean Baker"))
                 .stars(List.of("Mikey Madison", "Yura Borisov", "Karren Karagulian"))
                 .genre(List.of("Comedy", "Drama", "Romance"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Nosferatu")
@@ -455,7 +453,7 @@ public class DataInitializer {
                 .writers(List.of("Robert Eggers"))
                 .stars(List.of("Lily-Rose Depp", "Nicholas Hoult", "Bill Skarsgård"))
                 .genre(List.of("Fantasy", "Horror", "Romance"))
-                .type(MovieType.movie).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Severance")
@@ -465,7 +463,7 @@ public class DataInitializer {
                 .writers(List.of("Dan Erickson"))
                 .stars(List.of("Adam Scott", "Zach Cherry", "Britt Lower"))
                 .genre(List.of("Drama", "Mystery", "Sci-Fi", "Thriller"))
-                .type(MovieType.series).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.SERIES).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("The Last of Us")
@@ -475,7 +473,7 @@ public class DataInitializer {
                 .writers(List.of("Craig Mazin", "Neil Druckmann"))
                 .stars(List.of("Pedro Pascal", "Bella Ramsey", "Gabriel Luna"))
                 .genre(List.of("Action", "Adventure", "Drama", "Horror"))
-                .type(MovieType.series).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.SERIES).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Shogun")
@@ -485,7 +483,7 @@ public class DataInitializer {
                 .writers(List.of("Rachel Kondo", "Caillin Pully"))
                 .stars(List.of("Hiroyuki Sanada", "Cosmo Jarvis", "Anna Sawai"))
                 .genre(List.of("Action", "Drama", "History"))
-                .type(MovieType.series).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.SERIES).status(Movie.MovieStatus.PUBLISHED).build(),
 
             Movie.builder()
                 .title("Fallout")
@@ -495,7 +493,7 @@ public class DataInitializer {
                 .writers(List.of("Geneva Robertson-Dworet", "Graham Wagner"))
                 .stars(List.of("Ella Purnell", "Aaron Moten", "Walton Goggins"))
                 .genre(List.of("Action", "Adventure", "Drama", "Sci-Fi"))
-                .type(MovieType.series).status(MovieStatus.published).build(),
+                .type(Movie.MovieType.SERIES).status(Movie.MovieStatus.PUBLISHED).build(),
 
             // Upcoming (not published — tests only return published)
             Movie.builder()
@@ -506,7 +504,7 @@ public class DataInitializer {
                 .writers(List.of("James Cameron"))
                 .stars(List.of("Sam Worthington", "Zoe Saldana"))
                 .genre(List.of("Action", "Adventure", "Sci-Fi"))
-                .type(MovieType.movie).status(MovieStatus.upcoming).build()
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.UPCOMING).build()
         );
 
         movieRepository.saveAll(movies);

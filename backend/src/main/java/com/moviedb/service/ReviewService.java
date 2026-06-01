@@ -1,7 +1,7 @@
 package com.moviedb.service;
 
 import com.moviedb.dto.ReviewRequest;
-import com.moviedb.entity.Review;
+import com.moviedb.model.Review;
 import com.moviedb.exception.ResourceNotFoundException;
 import com.moviedb.repository.MovieRepository;
 import com.moviedb.repository.ReviewRepository;

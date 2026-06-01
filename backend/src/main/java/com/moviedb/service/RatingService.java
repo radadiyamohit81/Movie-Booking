@@ -1,7 +1,7 @@
 package com.moviedb.service;
 
 import com.moviedb.dto.RatingRequest;
-import com.moviedb.entity.Rating;
+import com.moviedb.model.Rating;
 import com.moviedb.exception.ResourceNotFoundException;
 import com.moviedb.repository.MovieRepository;
 import com.moviedb.repository.RatingRepository;

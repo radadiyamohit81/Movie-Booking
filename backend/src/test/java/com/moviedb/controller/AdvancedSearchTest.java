@@ -1,9 +1,7 @@
-package com.moviedb.search;
+package com.moviedb.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.moviedb.entity.Movie;
-import com.moviedb.enums.MovieStatus;
-import com.moviedb.enums.MovieType;
+import com.moviedb.model.Movie;
 import com.moviedb.repository.MovieRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -248,7 +246,7 @@ class AdvancedSearchTest {
         return Movie.builder()
                 .title(title).releaseYear(year).rating(rating).popularity(popularity)
                 .genre(genre).director(director).writers(writers).stars(stars)
-                .type(MovieType.movie).status(MovieStatus.published)
+                .type(Movie.MovieType.MOVIE).status(Movie.MovieStatus.PUBLISHED)
                 .description("Test description for " + title)
                 .duration("2h 0m")
                 .build();

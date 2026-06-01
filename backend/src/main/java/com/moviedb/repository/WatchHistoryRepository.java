@@ -1,6 +1,6 @@
 package com.moviedb.repository;
 
-import com.moviedb.entity.WatchHistory;
+import com.moviedb.model.WatchHistory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

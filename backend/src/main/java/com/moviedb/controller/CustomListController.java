@@ -2,7 +2,7 @@ package com.moviedb.controller;
 
 import com.moviedb.dto.AddMovieToListRequest;
 import com.moviedb.dto.CustomListRequest;
-import com.moviedb.entity.CustomList;
+import com.moviedb.model.CustomList;
 import com.moviedb.repository.UserRepository;
 import com.moviedb.service.CustomListService;
 import jakarta.validation.Valid;

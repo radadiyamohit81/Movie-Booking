@@ -1,7 +1,7 @@
 package com.moviedb.controller;
 
 import com.moviedb.dto.ReviewRequest;
-import com.moviedb.entity.Review;
+import com.moviedb.model.Review;
 import com.moviedb.repository.UserRepository;
 import com.moviedb.service.ReviewService;
 import jakarta.validation.Valid;

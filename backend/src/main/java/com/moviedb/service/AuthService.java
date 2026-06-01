@@ -3,7 +3,7 @@ package com.moviedb.service;
 import com.moviedb.dto.AuthRequest;
 import com.moviedb.dto.AuthResponse;
 import com.moviedb.dto.RegisterRequest;
-import com.moviedb.entity.User;
+import com.moviedb.model.User;
 import com.moviedb.repository.UserRepository;
 import com.moviedb.security.JwtUtil;
 import lombok.RequiredArgsConstructor;

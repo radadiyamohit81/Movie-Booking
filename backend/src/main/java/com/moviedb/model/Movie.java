@@ -1,7 +1,5 @@
-package com.moviedb.entity;
+package com.moviedb.model;
 
-import com.moviedb.enums.MovieStatus;
-import com.moviedb.enums.MovieType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -119,5 +117,38 @@ public class Movie {
     @PreUpdate
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
+    }
+
+    // ── Inner enums (lifecycle + content type) ────────────────────────────
+
+    /**
+     * Controls the content lifecycle / visibility of a Movie.
+     *
+     * published  — visible to end-users in all public search/browse endpoints.
+     * upcoming   — visible on the "upcoming" home section but not searchable.
+     * draft      — admin-only; hidden from all public APIs.
+     *
+     * WHY a lifecycle status instead of a boolean?
+     *   A binary "isPublished" flag cannot express "coming soon" without a second
+     *   boolean, creating impossible state combinations. An enum models the finite
+     *   state machine correctly and is self-documenting.
+     */
+    public enum MovieStatus {
+        PUBLISHED,
+        UPCOMING,
+        DRAFT
+    }
+
+    /**
+     * Discriminates between a theatrical/streaming movie and a TV series.
+     *
+     * WHY an enum (not a plain String)?
+     *   - Compile-time safety: typos in code caught at build time, not runtime.
+     *   - @Enumerated(STRING) stores the human-readable name in the DB column.
+     *   - Adding a new type (e.g. SHORT) is a one-line change here.
+     */
+    public enum MovieType {
+        MOVIE,
+        SERIES
     }
 }

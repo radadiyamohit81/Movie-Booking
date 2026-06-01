@@ -1,6 +1,6 @@
 package com.moviedb.repository;
 
-import com.moviedb.entity.Follow;
+import com.moviedb.model.Follow;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

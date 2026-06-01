@@ -1,8 +1,8 @@
 package com.moviedb.controller;
 
 import com.moviedb.dto.RatingRequest;
-import com.moviedb.entity.Rating;
-import com.moviedb.entity.User;
+import com.moviedb.model.Rating;
+import com.moviedb.model.User;
 import com.moviedb.repository.UserRepository;
 import com.moviedb.service.RatingService;
 import jakarta.validation.Valid;

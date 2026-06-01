@@ -2,9 +2,7 @@ package com.moviedb.service;
 
 import com.moviedb.dto.MovieAdminRequest;
 import com.moviedb.dto.MovieDto;
-import com.moviedb.entity.Movie;
-import com.moviedb.enums.MovieStatus;
-import com.moviedb.enums.MovieType;
+import com.moviedb.model.Movie;
 import com.moviedb.exception.ResourceNotFoundException;
 import com.moviedb.repository.MovieRepository;
 import com.moviedb.repository.spec.MovieSpecifications;
@@ -116,7 +114,7 @@ public class MovieService {
     @Transactional(readOnly = true)
     public List<MovieDto> getFeatured(int limit) {
         return movieRepository
-                .findByStatusOrderByPopularityDescRatingDesc(MovieStatus.published)
+                .findByStatusOrderByPopularityDescRatingDesc(Movie.MovieStatus.PUBLISHED)
                 .stream()
                 .limit(limit)
                 .map(this::toDto)
@@ -126,7 +124,7 @@ public class MovieService {
     @Transactional(readOnly = true)
     public List<MovieDto> getTrending(int limit) {
         return movieRepository
-                .findByStatusOrderByRatingDescPopularityDesc(MovieStatus.published)
+                .findByStatusOrderByRatingDescPopularityDesc(Movie.MovieStatus.PUBLISHED)
                 .stream()
                 .limit(limit)
                 .map(this::toDto)
@@ -136,7 +134,7 @@ public class MovieService {
     @Transactional(readOnly = true)
     public List<MovieDto> getUpcoming() {
         return movieRepository
-                .findByStatusOrderByCreatedAtDesc(MovieStatus.upcoming)
+                .findByStatusOrderByCreatedAtDesc(Movie.MovieStatus.UPCOMING)
                 .stream()
                 .map(this::toDto)
                 .toList();
@@ -144,14 +142,14 @@ public class MovieService {
 
     @Transactional(readOnly = true)
     public List<MovieDto> getByType(String type) {
-        MovieType movieType;
+        Movie.MovieType movieType;
         try {
-            movieType = MovieType.valueOf(type.toLowerCase());
+            movieType = Movie.MovieType.valueOf(type.toUpperCase());
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("Invalid type: " + type + ". Must be 'movie' or 'series'");
+            throw new IllegalArgumentException("Invalid type: " + type + ". Must be 'MOVIE' or 'SERIES'");
         }
         return movieRepository
-                .findByTypeAndStatusOrderByPopularityDescRatingDesc(movieType, MovieStatus.published)
+                .findByTypeAndStatusOrderByPopularityDescRatingDesc(movieType, Movie.MovieStatus.PUBLISHED)
                 .stream()
                 .map(this::toDto)
                 .toList();
@@ -216,10 +214,10 @@ public class MovieService {
         if (req.getGenre()       != null) movie.setGenre(req.getGenre());
 
         if (req.getType() != null) {
-            movie.setType(MovieType.valueOf(req.getType().toLowerCase()));
+            movie.setType(Movie.MovieType.valueOf(req.getType().toUpperCase()));
         }
         if (req.getStatus() != null) {
-            movie.setStatus(MovieStatus.valueOf(req.getStatus().toLowerCase()));
+            movie.setStatus(Movie.MovieStatus.valueOf(req.getStatus().toUpperCase()));
         }
         return movie;
     }

@@ -2,7 +2,7 @@ package com.moviedb.service;
 
 import com.moviedb.dto.AddMovieToListRequest;
 import com.moviedb.dto.CustomListRequest;
-import com.moviedb.entity.CustomList;
+import com.moviedb.model.CustomList;
 import com.moviedb.exception.ResourceNotFoundException;
 import com.moviedb.repository.CustomListRepository;
 import com.moviedb.repository.MovieRepository;

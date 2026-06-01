@@ -1,6 +1,6 @@
 package com.moviedb.repository;
 
-import com.moviedb.entity.CustomList;
+import com.moviedb.model.CustomList;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.moviedb.security;
 
-import com.moviedb.entity.User;
+import com.moviedb.model.User;
 import com.moviedb.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,6 +1,6 @@
 package com.moviedb.controller;
 
-import com.moviedb.entity.Follow;
+import com.moviedb.model.Follow;
 import com.moviedb.repository.UserRepository;
 import com.moviedb.service.FollowService;
 import lombok.RequiredArgsConstructor;

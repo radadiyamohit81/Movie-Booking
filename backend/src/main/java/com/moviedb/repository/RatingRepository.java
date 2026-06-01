@@ -1,6 +1,6 @@
 package com.moviedb.repository;
 
-import com.moviedb.entity.Rating;
+import com.moviedb.model.Rating;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

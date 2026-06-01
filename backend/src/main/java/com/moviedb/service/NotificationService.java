@@ -1,6 +1,6 @@
 package com.moviedb.service;
 
-import com.moviedb.entity.Notification;
+import com.moviedb.model.Notification;
 import com.moviedb.exception.ResourceNotFoundException;
 import com.moviedb.repository.NotificationRepository;
 import lombok.RequiredArgsConstructor;
